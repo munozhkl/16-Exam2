@@ -2,8 +2,8 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Kathi MUnoz.  March 2018.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -154,10 +154,17 @@ def problem2(n, seq):
       :type seq:  [int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    seq_first3 = []
+    for k in range(len(seq)):
+        if seq[k] < n:
+            seq_first3 = seq_first3 + [seq[k]]
+        if len(seq_first3) == 3:
+            return seq_first3
+    if len(seq_first3) != 3:
+        return 'Too few'
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
